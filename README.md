@@ -30,8 +30,7 @@ Simultaneously, a raindrop sensor monitors for precipitation. When rain is detec
 
 Connect the components to the Arduino Nano as described below.
 
-
-
+![Wiring Diagram](https://raw.githubusercontent.com/gayan-tharuka/Rain-Harvest/refs/heads/main/Rain%20Harvest.png?token=GHSAT0AAAAAADHS7PQIIR4OOO557CH4PKT42GMJGPA)
 
 | Component             | Sensor/Relay Pin | Arduino Nano Pin |
 | --------------------- | ---------------- | ---------------- |
