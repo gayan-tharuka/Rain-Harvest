@@ -30,6 +30,9 @@ Simultaneously, a raindrop sensor monitors for precipitation. When rain is detec
 
 Connect the components to the Arduino Nano as described below.
 
+
+
+
 | Component             | Sensor/Relay Pin | Arduino Nano Pin |
 | --------------------- | ---------------- | ---------------- |
 | Soil Moisture Sensor 1 | Analog Out (A0)  | `A0`             |
