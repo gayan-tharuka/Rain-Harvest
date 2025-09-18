@@ -17,15 +17,15 @@
 
 // Soil Moisture Thresholds (0-1023)
 // Relay turns ON when moisture drops BELOW this value
-#define SOIL_MOISTURE_MIN 300
+#define SOIL_MOISTURE_MIN 600
 // Relay turns OFF when moisture goes ABOVE this value
-#define SOIL_MOISTURE_MAX 700
+#define SOIL_MOISTURE_MAX 601
 
 // Rain Sensor Thresholds (0-1023)
 // Relay turns ON when rain value drops BELOW this value
-#define RAIN_DETECT_MIN 400
+#define RAIN_DETECT_MIN 600
 // Relay turns OFF when rain value goes ABOVE this value (it's dry again)
-#define RAIN_DETECT_MAX 800
+#define RAIN_DETECT_MAX 601
 
 // --- TIMING ---
 // How often to check the sensors (in milliseconds)
@@ -98,10 +98,10 @@ void handleSoilSensor1() {
 
   // Logic for Relay 1
   if (soilValue1 < SOIL_MOISTURE_MIN) {
-    digitalWrite(RELAY_PIN_1, LOW); // Turn Relay 1 ON (LOW for active-low)
+    digitalWrite(RELAY_PIN_1, HIGH); // Turn Relay 1 ON (LOW for active-low)
     Serial.println(" -> DRY, Relay 1 ON");
   } else if (soilValue1 > SOIL_MOISTURE_MAX) {
-    digitalWrite(RELAY_PIN_1, HIGH); // Turn Relay 1 OFF (HIGH for active-low)
+    digitalWrite(RELAY_PIN_1, LOW); // Turn Relay 1 OFF (HIGH for active-low)
     Serial.println(" -> WET, Relay 1 OFF");
   } else {
     Serial.println(" -> OK"); // In the middle, do nothing
@@ -116,10 +116,10 @@ void handleSoilSensor2() {
 
   // Logic for Relay 2
   if (soilValue2 < SOIL_MOISTURE_MIN) {
-    digitalWrite(RELAY_PIN_2, LOW); // Turn Relay 2 ON
+    digitalWrite(RELAY_PIN_2, HIGH); // Turn Relay 2 ON
     Serial.println(" -> DRY, Relay 2 ON");
   } else if (soilValue2 > SOIL_MOISTURE_MAX) {
-    digitalWrite(RELAY_PIN_2, HIGH); // Turn Relay 2 OFF
+    digitalWrite(RELAY_PIN_2, LOW); // Turn Relay 2 OFF
     Serial.println(" -> WET, Relay 2 OFF");
   } else {
     Serial.println(" -> OK");
